@@ -1,3 +1,9 @@
+
+>npm install –save enzyme
+> npm install –save react-test-renderer
+>npm install –save enzyme-adapter-react-16
+
+
 This project is created as demo react complete guide from Udemy course
 
 https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/13556324#overview
