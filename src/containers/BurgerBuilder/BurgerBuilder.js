@@ -61,9 +61,7 @@ class BurgerBuilder extends React.Component {
     ) : (
       <Spinner></Spinner>
     );
-    console.log(
-      "........................................." + this.state.ingredients
-    );
+
     if (this.props.ings) {
       burger = (
         <Aux>
