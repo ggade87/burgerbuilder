@@ -1,9 +1,9 @@
 import React from "react";
+
 import Logo from "../../Logo/Logo";
 import NavigationItems from "../NavigationItems/NavigationItems";
-import classes from "./SideDrawer.module.css";
-import BackDrop from "../../UI/BackDrop/BackDrop";
-import Aux from "../../../hoc/Auxillary";
+import classes from "./SideDrawer.css";
+import Backdrop from "../../UI/Backdrop/Backdrop";
 
 const sideDrawer = (props) => {
   let attachedClasses = [classes.SideDrawer, classes.Close];
@@ -11,17 +11,17 @@ const sideDrawer = (props) => {
     attachedClasses = [classes.SideDrawer, classes.Open];
   }
   return (
-    <Aux>
-      <BackDrop show={props.open} clicked={props.closed}></BackDrop>
+    <div>
+      <Backdrop show={props.open} clicked={props.closed} />
       <div className={attachedClasses.join(" ")} onClick={props.closed}>
         <div className={classes.Logo}>
-          <Logo></Logo>
+          <Logo />
         </div>
         <nav>
-          <NavigationItems isAuthenticated={props.isAuth}></NavigationItems>
+          <NavigationItems isAuthenticated={props.isAuth} />
         </nav>
       </div>
-    </Aux>
+    </div>
   );
 };
 
